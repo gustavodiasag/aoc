@@ -45,15 +45,17 @@ mod tests {
 
     #[test]
     fn part_one_example() {
-        let input = (vec![3, 4, 2, 1, 3, 3], vec![4, 3, 5, 3, 9, 3]);
-
-        assert_eq!(part_one(&input), 11);
+        assert_eq!(
+            part_one(&(vec![3, 4, 2, 1, 3, 3], vec![4, 3, 5, 3, 9, 3])),
+            11
+        );
     }
 
     #[test]
     fn part_two_example() {
-        let input = (vec![3, 4, 2, 1, 3, 3], vec![4, 3, 5, 3, 9, 3]);
-
-        assert_eq!(part_two(&input), 31);
+        assert_eq!(
+            part_two(&(vec![3, 4, 2, 1, 3, 3], vec![4, 3, 5, 3, 9, 3])),
+            31
+        );
     }
 }

@@ -54,29 +54,31 @@ mod tests {
 
     #[test]
     fn part_one_example() {
-        let input = vec![
-            vec![7, 6, 4, 2, 1],
-            vec![1, 2, 7, 8, 9],
-            vec![9, 7, 6, 2, 1],
-            vec![1, 3, 2, 4, 5],
-            vec![8, 6, 4, 4, 1],
-            vec![1, 3, 6, 7, 9],
-        ];
-
-        assert_eq!(part_one(&input), 2);
+        assert_eq!(
+            part_one(&vec![
+                vec![7, 6, 4, 2, 1],
+                vec![1, 2, 7, 8, 9],
+                vec![9, 7, 6, 2, 1],
+                vec![1, 3, 2, 4, 5],
+                vec![8, 6, 4, 4, 1],
+                vec![1, 3, 6, 7, 9],
+            ]),
+            2
+        );
     }
 
     #[test]
     fn part_two_example() {
-        let input = vec![
-            vec![7, 6, 4, 2, 1],
-            vec![1, 2, 7, 8, 9],
-            vec![9, 7, 6, 2, 1],
-            vec![1, 3, 2, 4, 5],
-            vec![8, 6, 4, 4, 1],
-            vec![1, 3, 6, 7, 9],
-        ];
-
-        assert_eq!(part_two(&input), 4);
+        assert_eq!(
+            part_two(&vec![
+                vec![7, 6, 4, 2, 1],
+                vec![1, 2, 7, 8, 9],
+                vec![9, 7, 6, 2, 1],
+                vec![1, 3, 2, 4, 5],
+                vec![8, 6, 4, 4, 1],
+                vec![1, 3, 6, 7, 9],
+            ]),
+            4
+        );
     }
 }

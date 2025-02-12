@@ -1,12 +1,11 @@
 use std::env;
 
-use aoc::day02;
+use aoc::day03;
 
 fn main() {
     let input = read_input(env::args()).unwrap();
 
-    let input = aoc::day02::parse_input(&input);
-    println!("{}", day02::part_two(&input));
+    println!("{}", day03::part_one(&input));
 }
 
 fn read_input(mut args: impl Iterator<Item = String>) -> Result<String, &'static str> {
