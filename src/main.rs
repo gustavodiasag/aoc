@@ -5,7 +5,7 @@ use aoc::day03;
 fn main() {
     let input = read_input(env::args()).unwrap();
 
-    println!("{}", day03::part_one(&input));
+    println!("{}", day03::part_two(&input));
 }
 
 fn read_input(mut args: impl Iterator<Item = String>) -> Result<String, &'static str> {
