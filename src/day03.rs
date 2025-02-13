@@ -5,24 +5,27 @@ pub fn part_one(input: &str) -> i32 {
 
     re.captures_iter(input)
         .map(|caps| {
-            let (_, [x, y]) = caps.extract();
+            let (s, [x, y]) = caps.extract();
 
-            Op::Mul(x.parse().unwrap(), y.parse().unwrap())
+            println!("{}-{}-{}", s, x, y);
+
+            let x: i32 = x.parse().unwrap();
+            let y: i32 = y.parse().unwrap();
+
+            x * y
         })
-        .map(|op| op.calculate())
         .sum()
 }
 
-enum Op {
-    Mul(i32, i32),
-}
+pub fn part_two(input: &str) -> i32 {
+    let re = Regex::new(r"mul\(([0-9]+),([0-9]+)\)|(do\(\))|(don't\(\))").unwrap();
 
-impl Op {
-    fn calculate(&self) -> i32 {
-        match self {
-            Op::Mul(x, y) => x * y,
-        }
-    }
+    re.captures_iter(input).map(|caps| {
+        let (s, x): (&str, [&str; N]) = caps.extract();
+
+        println!("{}--{:?}", s, x);
+    });
+    0
 }
 
 #[cfg(test)]
